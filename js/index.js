@@ -28,6 +28,7 @@ const getStores = () => {
     }
   }).then((data) => {
     searchLocationsNear(data);
+    setStoreList(data);
   })
 }
 
@@ -87,3 +88,26 @@ const createMarker = (latlng, name, address, storeNumber, openTextStatus, phone)
   })
 }
 
+const setStoreList = (stores) => {
+  let content = "";
+  stores.forEach((store, index) => {
+    console.log(store, index);
+    content += `
+      <div class="store-container">
+        <div class="store-container-background">
+            <div class="store-info-container">
+                <div class="store-address">
+                    <span>${store.addressLines[0]}</span>
+                    <span>${store.addressLines[1]}</span>
+                </div>
+                <div class="store-phone-number">${store.phoneNumber}</div>
+            </div>
+            <div class="store-number-container">
+                <div class="store-number">${index+1}</div>
+            </div>
+        </div>
+    </div>
+    `;
+  })
+  document.querySelector('.store-list').innerHTML = content;
+}

@@ -67,6 +67,8 @@ body {
     background-color: white;
     bottom: 4%;
     border-radius: 20px;
+    display: flex;
+    overflow: hidden;
 
 }
 
@@ -109,4 +111,67 @@ body {
 .store-info-phone a  {
     color: #514c4c;
     text-emphasis: none;
+}
+
+.store-list {
+    flex-grow: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: scroll;
+}
+
+.store-container {
+    border-bottom: 1px solid #979797;
+    display: flex;
+}
+
+.store-container-background {
+    flex-grow: 1;
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.store-container-background:hover {
+    background-color: #cccccc87;
+    cursor: pointer;
+}
+
+.store-info-container {
+    flex-grow: 1;
+}
+
+.store-address {
+    font-size: 21px;
+    color: #514c4c;
+    margin-top: 20px;
+}
+
+.store-address span {
+    display: block;
+}
+
+.store-phone-number {
+
+}
+
+.store-number-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store-number {
+     width: 25px;
+     height: 25px;
+     background-color: #454e53;
+     border-radius: 50%;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }

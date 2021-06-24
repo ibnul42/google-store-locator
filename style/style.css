@@ -175,3 +175,21 @@ body {
      justify-content: center;
      align-items: center;
 }
+
+.intro {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.enter-zip {
+    color: #514c4c;
+    font-size: 18px;
+}
+
+.find-stories {
+    color: #1975a1;
+    font-size: 18px;
+}
